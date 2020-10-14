@@ -25,13 +25,13 @@ To manually upload the file, use the following commands:
 
 #### Create a bucket using the command line
 
-` aws s3api create-bucket --bucket=<unique-bucket-name>  --region=<aws-region>  // for aws-region=us-east1 
+ ``` $ aws s3api create-bucket --bucket=<unique-bucket-name>  --region=<aws-region>  // for aws-region=us-east1 ``` 
 
- aws s3api create-bucket --bucket=<unique-bucket-name> --region=<aws-region> --create-bucket-configuration LocationConstraint=<aws-region> // for any other region `
+ ``` $ aws s3api create-bucket --bucket=<unique-bucket-name> --region=<aws-region> --create-bucket-configuration LocationConstraint=<aws-region> // for any other region ```
 
 #### Manually upload the file
 
- ``` aws s3 cp <build-artifact> s3://<unique-bucket-name>/v1.0.0/example.zip ```
+ ``` $ aws s3 cp <build-artifact> s3://<unique-bucket-name>/v1.0.0/example.zip ```
 
 #### Creating the lambda function
 
@@ -44,16 +44,16 @@ To apply the configurations:
 
 #### Switch to the terraform directory 
 
-``` cd terraform ```
+```$ cd terraform ```
 
 #### Initialize the new terraform directory 
 
-``` terraform init ```
+```$ terraform init ```
 
 #### Apply the configurations
 
-``` terraform apply ```
+```$ terraform apply ```
 
 #### To clean up the resources 
 
- ``` terraform destroy -var="app_version=1.0.0" ```
+ ```$ terraform destroy -var="app_version=1.0.0" ```
